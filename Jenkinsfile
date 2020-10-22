@@ -11,7 +11,7 @@ pipeline {
             steps {
                 sh """
                 pip install ansible
-                apt-get install zip -y
+                yum install zip -y
                 """
             } // steps
         } // stage
