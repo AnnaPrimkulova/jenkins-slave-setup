@@ -14,7 +14,7 @@ pipeline {
                 apt-get install zip -y
             """
         } // steps
-    } //stage
+    } // stage
     stage("Build") {
         steps {
             sh """
