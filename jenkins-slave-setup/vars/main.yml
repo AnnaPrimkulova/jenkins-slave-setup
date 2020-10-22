@@ -1,2 +1,3 @@
 ---
 # vars file for jenkins-slave-setup
+remote_root_directory: /home/jenkins/jenkins_slave
