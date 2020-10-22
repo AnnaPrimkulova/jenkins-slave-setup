@@ -10,8 +10,8 @@ pipeline {
         stage("Set up") {
             steps {
                 sh """
-                pip install ansible
-                yum install zip -y
+                    pip install ansible
+                    yum install zip -y
                 """
             } // steps
         } // stage
@@ -35,9 +35,9 @@ pipeline {
     stage("Deploy") {
         steps {
             sh """
-            zip "jenkins-slave-setup.zip" .
-            scp jenkins-slave-setup.zip root@192.168.5.133:/var/www/html/my-repository
-        """
+                zip "jenkins-slave-setup.zip" .
+                scp jenkins-slave-setup.zip root@192.168.5.133:/var/www/html/my-repository
+            """
         } //steps
     } //stages
 } //pipeline
