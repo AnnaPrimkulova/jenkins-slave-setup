@@ -2,8 +2,6 @@
 - name: Set up jenkins slave machines
   hosts: jenkins-slaves
   remote_user: ansible
-  vars: 
-    - remote_root_directory:
   become: yes
   roles:
     - jenkins-slave-setup
