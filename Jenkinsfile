@@ -6,15 +6,16 @@ pipeline {
             args '-u 0:0 -v /home/jenkins/.ssh:/root.ssh'
         } //docker
     } //agent
-    stages {
+    stages { 
         stage("Set up") {
-        steps {
-            sh """
+            steps {
+                sh """
                 pip install ansible
                 apt-get install zip -y
-            """
-        } // steps
-    } // stage
+                """
+            } // steps
+        } // stage
+    } //stages
     stage("Build") {
         steps {
             sh """
@@ -39,4 +40,4 @@ pipeline {
         """
         } //steps
     } //stages
-}
+} //pipeline
